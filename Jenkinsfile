@@ -14,13 +14,7 @@ pipeline {
                 }
             }
         }
-    }
-    post{
-        always{
-            archiveArtifacts artifacts:'requirements.txt,mylog.log', fingerprint: true
-            cleanWs()
-            emailext(
-               stage('Send Email'){
+        stage('Send Email'){
             steps{
                 emailext(
                     subject: "This is subject",
@@ -33,6 +27,11 @@ pipeline {
         
         }
     }
-        
+    post{
+        always{
+            archiveArtifacts artifacts:'requirements.txt,mylog.log', fingerprint: true
+            cleanWs()
+        }
+    }
 }
 
