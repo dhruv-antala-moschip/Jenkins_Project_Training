@@ -18,6 +18,7 @@ pipeline {
     post{
         always{
             archiveArtifacts artifacts:'requirements.txt,mylog.log', fingerprint: true
+            cleanWs()
         }
     }
         
