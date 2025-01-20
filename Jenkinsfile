@@ -31,7 +31,7 @@ pipeline {
         always{
             archiveArtifacts artifacts:'requirements.txt,mylog.log', fingerprint: true
             cleanWs()
-            junit keepProperties: true
+            junit skipOldReports: true, stdioRetention: '', testResults: ''
         }
     }
 }
