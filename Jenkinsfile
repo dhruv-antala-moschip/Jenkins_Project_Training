@@ -19,6 +19,18 @@ pipeline {
         always{
             archiveArtifacts artifacts:'requirements.txt,mylog.log', fingerprint: true
             cleanWs()
+            emailext(
+               stage('Send Email'){
+            steps{
+                emailext(
+                    subject: "This is subject",
+                    body: "This is body part",
+                    attachLog: true,
+                    attachmentsPattern: 'mylog.log, requirements.txt',
+                    to: 'dhruv.antala@moschip.com'
+                )
+            }
+        }
         }
     }
         
