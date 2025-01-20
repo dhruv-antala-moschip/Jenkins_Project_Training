@@ -1,0 +1,18 @@
+INFO:log_info:Hello
+INFO:log_info:List of available jobs:
+INFO:log_info:-------------------------
+INFO:log_info:build_detail2
+INFO:log_info:build_details
+INFO:log_info:build_details1
+INFO:log_info:Demo
+INFO:log_info:dev
+INFO:log_info:mangal_pandey
+INFO:log_info:run
+INFO:log_info:run2
+INFO:log_info:setup
+INFO:log_info:setup2
+INFO:log_info:teardown
+INFO:log_info:teardown2
+INFO:log_info:Number of available builds = 19
+INFO:log_info:Demo
+INFO:log_info:('03-01-2025 06:48:06', 'http://localhost:8080/job/Demo/19/', 'build no:-', 19)
