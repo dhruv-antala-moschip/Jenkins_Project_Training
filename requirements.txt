@@ -1,14 +1,1 @@
-certifi==2024.12.14
-charset-normalizer==3.4.1
-exceptiongroup==1.2.2
-idna==3.10
-iniconfig==2.0.0
 jenkinsapi==0.3.13
-packaging==24.2
-pluggy==1.5.0
-pytest==8.3.4
-pytz==2024.2
-requests==2.32.3
-six==1.17.0
-tomli==2.2.1
-urllib3==2.3.0
