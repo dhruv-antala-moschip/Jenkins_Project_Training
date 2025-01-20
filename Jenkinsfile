@@ -15,5 +15,11 @@ pipeline {
             }
         }
     }
+    post{
+        always{
+            artifacts:'requirements.txt,mylog.log', fingerprint: true
+        }
+    }
+        
 }
 
