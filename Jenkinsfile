@@ -30,7 +30,7 @@ pipeline {
                     to: 'dhruv.antala@moschip.com'
                 )
             }
-        }
+        
         }
     }
         
