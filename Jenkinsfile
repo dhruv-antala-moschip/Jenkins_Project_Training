@@ -31,7 +31,6 @@ pipeline {
         always{
             archiveArtifacts artifacts:'requirements.txt,logreport.log,report.xml', fingerprint: true
             junit 'report.xml'
-            cleanWs()
             
         }
     }
