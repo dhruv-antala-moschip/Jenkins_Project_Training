@@ -1,3 +1,8 @@
+"""
+this script to get Jenkins Pipeline information like get all
+jobs,change job name,get number of builds and last build detail
+and also it will generate xml tree which is used in junit for testing
+"""
 import argparse
 from jenkinsapi.jenkins import Jenkins
 import logging
