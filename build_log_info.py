@@ -22,8 +22,13 @@ consoleFormatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'
 consoleHandler.setFormatter(consoleFormatter)
 logger.addHandler(consoleHandler)
 
-# Get all jobs
+
 def get_all_jobs(jenkins_obj):
+    """
+    # Get all jobs
+    :param jenkins_obj: jenkins_credentials
+    :return:
+    """
     jobs = jenkins_obj.get_jobs()
     job_list = [job[0] for job in jobs]
     logger.info("List of available jobs:")
@@ -31,14 +36,26 @@ def get_all_jobs(jenkins_obj):
     for job in job_list:
         logger.info(job)
 
-# Change job name
+
 def change_job_name(jenkins_obj, job_name, job_new_name):
+    """
+    # Change job name
+    :param jenkins_obj: jenkins_credentials
+    :param job_name: job_name
+    :param job_new_name:new_job_name
+    :return:
+    """
     jenkins_obj.rename_job(job_name, job_new_name)
     logger.info(f"Name changed from {job_name} to {job_new_name}")
     logger.info("\n")
 
-# Get total number of builds
+
 def get_no_builds(jenkins_obj):
+    """
+    # Get total number of builds
+    :param jenkins_obj: jenkins_credentials
+    :return:
+    """
     job = jenkins_obj.get_job("Demo")
     job_builds = list(job.get_build_ids())
     no_builds = len(job_builds)
@@ -46,13 +63,22 @@ def get_no_builds(jenkins_obj):
 
 # Get last build details
 def get_last_build_details(jenkins_obj: Jenkins, job_name):
+    """
+    :param jenkins_obj: jenkins_credentials
+    :param job_name: job_name
+    :return:
+    """
     job = jenkins_obj.get_job(job_name)
     job_last_build = job.get_last_build()
     logger.info(
         f"{job_last_build.get_timestamp().strftime('%d-%m-%Y %H:%M:%S'), job_last_build.get_build_url(), 'build no:-', job_last_build.buildno}")
 
-# Build XML tree
+
 def build_xml_tree():
+    """
+    building xml tree
+    :return:
+    """
     root = Tree.Element("testsuites")
     log_details = []
 
