@@ -1,0 +1,6 @@
+xnnc3-hifi1-acc3-allStages_config
+xnnc3-hifi1s-acc3-allStages_config
+xnnc3-hifi3z-acc3-allStages_config
+xnnc3-hifi4-acc3-allStages_config
+xnnc3-hifi5-acc3-allStages_config
+xnnc3-hifi5s-acc3-allStages_config
